@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切换图片</title>
+    <style>
+        div {
+            border: 1px solid white;
+            width: 500px;
+            height: 350px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+    <!--<script>-->
+        <!--function init() {-->
+            <!--setInterval("changeImg()", 1000);-->
+
+            <!--//设置显示广告图片的定时操作-->
+            <!--time = setInterval("shouAD()", 3000)-->
+        <!--}-->
+        <!--var i = 1;-->
+        <!--function changeImg() {-->
+            <!--i++;-->
+            <!--document.getElementById("img1").src = "../img/" + i + ".jpg";-->
+            <!--if (i == 3) {-->
+                <!--i = 0;-->
+            <!--}-->
+        <!--}-->
+
+        <!--function shouAD() {-->
+            <!--var adEle = document.getElementById("img2");-->
+            <!--adEle.style.display = "block";-->
+            <!--clearInterval(time);-->
+            <!--time=setInterval("hiddenAd()", 3000);-->
+        <!--}-->
+        <!--function hiddenAd() {-->
+            <!--document.getElementById("img2").style.display = "none";-->
+            <!--clearInterval(time);-->
+        <!--}-->
+
+    <!--</script>-->
+    <script type="text/javascript" src="1.js"></script>
+</head>
+<body onload="init()">
+<div id="">
+    <img id="img2" src="../img/f001a62f-a49d-4a4d-b56f-2b6908a0002c_g.jpg" width="100%" style="display: none"/>
+    <input type="button" value="下一张"/>
+    <img src="../img/1.jpg" width="100%" height="100%" id="img1"/>
+</div>
+</body>
+</html>

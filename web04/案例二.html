@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格隔行换色</title>
+    <script>
+        window.onload = function () {
+            var talEle = document.getElementById("tal");
+            var talcount = talEle.tBodies[0].rows.length;
+            for (var i = 0; i < talcount; i++) {
+                if (i % 2 == 0) {
+                    talEle.tBodies[0].rows[i].style.backgroundColor = "pink";
+                } else {
+                    talEle.tBodies[0].rows[i].style.backgroundColor = "gold";
+                }
+            }
+        }
+        function changeColor(id, flag) {
+            if (flag == 'over') {
+                document.getElementById(id).style.backgroundColor = "red";
+            } else {
+                document.getElementById(id).style.backgroundColor = "pink";
+                document.getElementById(id).sourceIndex
+            }
+        }
+        function allcheck() {
+            var checkAllEle=document.getElementById("all");
+            if(checkAllEle.checked==true){
+                var checkOnes=document.getElementsByName("checkOne")
+                for(var i=0;i<checkOnes.length;i++){
+                    checkOnes[i].checked=true;
+                }
+            }else{
+                var checkOnes=document.getElementsByName("checkOne")
+                for(var i=0;i<checkOnes.length;i++){
+                    checkOnes[i].checked=false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<table id="tal" border="1" width="500" height="50" align="center">
+    <thead>
+    <tr>
+        <td colspan="4">
+            <input type="button" value="添加">
+            <input type="button" value="删除">
+        </td>
+    </tr>
+    <tr>
+        <td><input id="all" type="checkbox" onclick="allcheck()"></td>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr onmouseover="changeColor('tr1','over')" id="tr1" onmouseout="changeColor('tr1','out')">
+        <td><input type="checkbox" name="checkOne"></td>
+        <td>1</td>
+        <td>张一</td>
+        <td>22</td>
+    </tr>
+    <tr onmouseover="changeColor('tr2','over')" id="tr2" onmouseout="changeColor('tr2','out')">
+        <td><input type="checkbox" name="checkOne"></td>
+        <td>2</td>
+        <td>张一</td>
+        <td>22</td>
+    </tr>
+    <tr onmouseover="changeColor('tr3','over')" id="tr3" onmouseout="changeColor('tr3','out',this)">
+        <td><input type="checkbox" name="checkOne"></td>
+        <td>3</td>
+        <td>张一</td>
+        <td>22</td>
+    </tr>
+    <tr onmouseover="changeColor('tr4','over')" id="tr4" onmouseout="changeColor('tr4','out',this)">
+        <td><input type="checkbox" name="checkOne"></td>
+        <td>4</td>
+        <td>张一</td>
+        <td>22</td>
+    </tr>
+    <tr onmouseover="changeColor('tr5','over',this)" id="tr5" onmouseout="changeColor('tr5','out',this)">
+        <td><input type="checkbox" name="checkOne"></td>
+        <td>5</td>
+        <td>张一</td>
+        <td>22</td>
+    </tr>
+    <tr onmouseover="changeColor('tr6','over',this)" id="tr6" onmouseout="changeColor('tr6','out',this)">
+        <td><input type="checkbox" name="checkOne"></td>
+        <td>6</td>
+        <td>张一</td>
+        <td>22</td>
+    </tr>
+    <tr onmouseover="changeColor('tr7','over',this)" id="tr7" onmouseout="changeColor('tr7','out',this)">
+        <td><input type="checkbox" name="checkOne"></td>
+        <td>7</td>
+        <td>张一</td>
+        <td>22</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
