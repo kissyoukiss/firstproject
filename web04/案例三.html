@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省市二级联动</title>
+    <script>
+        var cities = new Array(4);
+        cities[0] = new Array("11", "12", "13", "14");
+        cities[1] = new Array("21", "22", "23", "24");
+        cities[2] = new Array("31", "32", "33", "34");
+        cities[3] = new Array("41", "42", "43", "44");
+
+        function changeCity(value) {
+            var cityEle = document.getElementById("city");
+            cityEle.option.length=0;
+            for (var i = 0; i < cities.length; i++) {
+                if (value == i) {
+                    for (var j = 0; j < cities[i].length; j++) {
+                        var textNodes = document.createTextNode(cities[i][j]);
+                        var opEle = document.createElement("option");
+                        opEle.appendChild(textNodes);
+                        cityEle.appendChild(opEle);
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <select onchange="changeCity(this.value)">
+                <option>请选择</option>
+                <option value="0">湖北</option>
+                <option value="1">湖南</option>
+                <option value="2">河南</option>
+                <option value="3">河北</option>
+            </select>
+            <select id="city">
+
+            </select>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

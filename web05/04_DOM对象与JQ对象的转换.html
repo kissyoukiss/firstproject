@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM的转换</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+    <script>
+        function write1() {
+            //document.getElementById("span1").innerHTML = "萌萌哒";
+
+            var spanEle = document.getElementById("span1");
+            $(spanEle).html("思密达");
+        }
+        $(function () {
+            $("#btn").click(
+                function () {
+                    $("#span1").html("呵呵哒");
+                }
+            )
+            $("#span1").get(0).innerHTML = "美美哒";
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="JS写入" onclick="write1()">
+<input type="button" value="JQ写入" id="btn"><br>
+班长：<span id="span1">你好帅！</span>
+</body>
+</html>

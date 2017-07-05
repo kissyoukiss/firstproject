@@ -1,0 +1,32 @@
+div {
+    font-size: 20px;
+    color: red;
+}
+
+.div1 {
+    border: 1px solid red;
+    float: right;
+    width: 20px;
+    height: 30px;
+    font-size: 30px;
+    color: gold;
+}
+
+#div5 {
+    font-size: 35px;
+    color: antiquewhite;
+}
+
+div p {
+    font-size: 50px;
+}
+
+input[type="text"] {
+    font-size: 30px;
+}
+
+ul li{
+    background: black;
+    display: inline;
+    font-size: 15px;
+}
